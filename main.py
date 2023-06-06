@@ -18,6 +18,7 @@ import calendar
 ##  
 ##########
 
+
 def ask_year():
     current_year = datetime.datetime.now().year
     year = input(f"Enter a year (Press enter to default to current year {current_year}): ")
@@ -44,6 +45,7 @@ def ask_year():
 ##
 ##########
 
+
 def get_and_display_months():
     # Ask for numbers
     numbers_str = input("Enter a series of numbers separated by commas: ")
@@ -54,10 +56,7 @@ def get_and_display_months():
     # Convert the list of strings into a list of integers
     numbers_list = [int(num_str) for num_str in numbers_str_list]
     
-    return numbers_list  
-    # Iterate over the list and display each number
- ##   for num in numbers_list:
- ##       print(num)
+    return numbers_list
 
 
 ##########
@@ -68,21 +67,11 @@ def get_and_display_months():
 ## Name my file patches.csv
 ## Also give me an example of the patches.csv 
 ##
-## read_file_patches()
+## read_file_patches2()
 ##
 ## I need to output patch times from offset, miltime, year and month.   
 ##
 ##########
-
-def read_file_patches():
-    with open('patches.csv', 'r') as file:
-        csv_reader = csv.DictReader(file)
-        for row in csv_reader:
-            pt_offset = row['PTOFFSET']
-            mil_time = row['MILTIME']
-            summary = row['SUMMARY']
-            description = row['DESCRIPTION']
-            print(f"PTOFFSET: {pt_offset}, MILTIME: {mil_time}, SUMMARY: {summary}, DESCRIPTION: {description}")
 
 
 def read_file_patches2():
@@ -98,14 +87,6 @@ def read_file_patches2():
             })
     return data
 
-## patches_data = read_file_patches2()
-## for patch in patches_data:
-##     print(patch)
-
-
-
-
-
 
 ##########
 ## 
@@ -117,6 +98,7 @@ def read_file_patches2():
 ## print(f" Patch Tuesday falls on {patch_tuesday}.")
 ##
 ##########
+
 
 def get_patch_tuesdays(year, month):
     # Get the matrix representing the month's calendar
@@ -132,12 +114,12 @@ def get_patch_tuesdays(year, month):
 ## patch_tuesday = get_patch_tuesdays(2034, 7)
 ## print(f"Patch Tuesday falls on {patch_tuesday}.")
 
+
 ##########
 ##    
 ##  Starting coding db230606    
 ## 
 ##########   
-
 
 
 year = ask_year()
