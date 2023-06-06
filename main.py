@@ -99,10 +99,8 @@ def read_file_patches():
 ## Write a python function to get the year and month passed to it and it will return a list of patch tuesdays ( second tuesday of the month ) 
 ##
 ## How to call function: 
-## year = 2023
-## month = 6
-## patch_tuesday = get_patch_tuesdays(year, month)
-## print(f"In {calendar.month_name[month]} {year}, Patch Tuesday falls on {patch_tuesday}.")
+## patch_tuesday = get_patch_tuesdays(2034, 7)
+## print(f" Patch Tuesday falls on {patch_tuesday}.")
 ##
 ##########
 
@@ -117,15 +115,12 @@ def get_patch_tuesdays(year, month):
 
     return patch_tuesday
 
-year = 2024
-month = 7
-patch_tuesday = get_patch_tuesdays(year, month)
-print(f"In {calendar.month_name[month]} {year}, Patch Tuesday falls on {patch_tuesday}.")
-
-
-
-
-
+## patch_tuesday = get_patch_tuesdays(2034, 7)
+## print(f"Patch Tuesday falls on {patch_tuesday}.")
+   
+   
+   
+   
    
 
 ## note to self, patch tuesday finder !!
