@@ -5,17 +5,8 @@ import calendar
 
 ##########
 ## 
-##
-##
-##
-##########
-
-##########
-## 
-## Magic to push to github:
-## git add <name> 
-## git commit -m "functions added year and months"
-## git push -u origin main
+##  Written by David Brendlinger in June of 2023
+##  Secu Calender for Server Opperations team patching
 ##
 ##########
 
@@ -117,10 +108,11 @@ def get_patch_tuesdays(year, month):
 
 ## patch_tuesday = get_patch_tuesdays(2034, 7)
 ## print(f"Patch Tuesday falls on {patch_tuesday}.")
-   
-   
-   
-   
-   
 
-## note to self, patch tuesday finder !!
+##########
+##    
+##  Starting coding db230606    
+## 
+##########   
+   
+   
