@@ -1,5 +1,6 @@
 import datetime
 import csv
+import calendar
 
 
 ##########
@@ -90,6 +91,37 @@ def read_file_patches():
             summary = row['SUMMARY']
             description = row['DESCRIPTION']
             print(f"PTOFFSET: {pt_offset}, MILTIME: {mil_time}, SUMMARY: {summary}, DESCRIPTION: {description}")
+
+
+##########
+## 
+## GPTChat:
+## Write a python function to get the year and month passed to it and it will return a list of patch tuesdays ( second tuesday of the month ) 
+##
+## How to call function: 
+## year = 2023
+## month = 6
+## patch_tuesday = get_patch_tuesdays(year, month)
+## print(f"In {calendar.month_name[month]} {year}, Patch Tuesday falls on {patch_tuesday}.")
+##
+##########
+
+def get_patch_tuesdays(year, month):
+    # Get the matrix representing the month's calendar
+    month_calendar = calendar.monthcalendar(year, month)
+
+    # Tuesdays are the 2nd index (starting from 0) in each week
+    # If the first day of the month is a Wednesday or later, the second Tuesday will be in the second week.
+    # Otherwise, it'll be in the third week.
+    patch_tuesday = month_calendar[1][1] if month_calendar[0][1] else month_calendar[2][1]
+
+    return patch_tuesday
+
+year = 2024
+month = 7
+patch_tuesday = get_patch_tuesdays(year, month)
+print(f"In {calendar.month_name[month]} {year}, Patch Tuesday falls on {patch_tuesday}.")
+
 
 
 
