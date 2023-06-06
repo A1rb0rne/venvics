@@ -1,4 +1,6 @@
 import datetime
+import csv
+
 
 ##########
 ## 
@@ -9,11 +11,12 @@ import datetime
 
 ##########
 ## 
-## Magic to push to github: 
-## git commit -m "functions added year and months"; git push -u origin main
+## Magic to push to github:
+## git add <name> 
+## git commit -m "functions added year and months"
+## git push -u origin main
 ##
 ##########
-
 
 
 ##########
@@ -37,12 +40,13 @@ def ask_year():
             return ask_year()
     return year
 
+
 ##########
 ## 
 ##  GPTchat: Write a function that asks for a series of numbers seperated by commas.  Save the info as a list but iterate the list showing each value 
 ##  get_and_display_months()
 ##
-##  this may be the magic for all this code
+##  This may be the magic for all this code
 ##  for num in numbers_list:
 ##      print(num)
 ##
@@ -63,3 +67,35 @@ def get_and_display_months():
         print(num)
 
 
+##########
+## 
+## GPTChat:
+## Write a python function to read a file. the file uses a csv with headers.  
+## I want the following values:  PTOFFSET: MILTIME: SUMMARY:  DESCRIPTION:.  
+## Name my file patches.csv
+## Also give me an example of the patches.csv 
+##
+## read_file_patches()
+##
+## I need to output patch times from offset, miltime, year and month.   
+##
+##########
+
+def read_file_patches():
+    with open('patches.csv', 'r') as file:
+        csv_reader = csv.DictReader(file)
+        for row in csv_reader:
+            pt_offset = row['PTOFFSET']
+            mil_time = row['MILTIME']
+            summary = row['SUMMARY']
+            description = row['DESCRIPTION']
+            print(f"PTOFFSET: {pt_offset}, MILTIME: {mil_time}, SUMMARY: {summary}, DESCRIPTION: {description}")
+
+
+
+
+
+
+
+
+## note to self, patch tuesday finder !!
