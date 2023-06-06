@@ -85,6 +85,28 @@ def read_file_patches():
             print(f"PTOFFSET: {pt_offset}, MILTIME: {mil_time}, SUMMARY: {summary}, DESCRIPTION: {description}")
 
 
+def read_file_patches2():
+    data = []
+    with open('patches.csv', 'r') as file:
+        csv_reader = csv.DictReader(file)
+        for row in csv_reader:
+            data.append({
+                'PTOFFSET': row['PTOFFSET'],
+                'MILTIME': row['MILTIME'],
+                'SUMMARY': row['SUMMARY'],
+                'DESCRIPTION': row['DESCRIPTION'],
+            })
+    return data
+
+## patches_data = read_file_patches2()
+## for patch in patches_data:
+##     print(patch)
+
+
+
+
+
+
 ##########
 ## 
 ## GPTChat:
