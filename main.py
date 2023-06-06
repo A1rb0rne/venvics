@@ -54,9 +54,10 @@ def get_and_display_months():
     # Convert the list of strings into a list of integers
     numbers_list = [int(num_str) for num_str in numbers_str_list]
     
+    return numbers_list  
     # Iterate over the list and display each number
-    for num in numbers_list:
-        print(num)
+ ##   for num in numbers_list:
+ ##       print(num)
 
 
 ##########
@@ -114,5 +115,20 @@ def get_patch_tuesdays(year, month):
 ##  Starting coding db230606    
 ## 
 ##########   
+
+
+
+year = ask_year()
+numbers_list = get_and_display_months()
+
+for num in numbers_list:
+        patch_tuesday = get_patch_tuesdays(year,num)
+        print( "pt",patch_tuesday, "year",year,"month",num)
+        
+
+
+
+
+
    
    
