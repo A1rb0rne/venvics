@@ -97,7 +97,7 @@ def read_file_patches():
 ## test   
 
 Dave was here !!
-
+Dave was here too 
 
 
 ## note to self, patch tuesday finder !!
