@@ -146,7 +146,18 @@ numbers_list = get_and_display_months()
 for num in numbers_list:
         patch_tuesday = get_patch_tuesdays(year,num)
         print( "pt",patch_tuesday, "year",year,"month",num)
-        
+        patches_data = read_file_patches2()
+        for patch in patches_data:
+             # print(patch)
+             pt_offset = patch['PTOFFSET']
+             mil_time = patch['MILTIME']
+             summary = patch['SUMMARY']
+             description = patch['DESCRIPTION']
+             print(f"PTOFFSET: {pt_offset}")
+             print(f"MILTIME: {mil_time}")
+             print(f"SUMMARY: {summary}")
+             print(f"DESCRIPTION: {description}")
+             print("--- End of patch ---")
 
 
 
