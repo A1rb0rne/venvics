@@ -1,7 +1,7 @@
 import datetime
 import csv
 import calendar
-
+#from datetime import datetime, timedelta
 
 ##########
 ## 
@@ -108,11 +108,8 @@ def get_patch_tuesdays(year, month):
     # If the first day of the month is a Wednesday or later, the second Tuesday will be in the second week.
     # Otherwise, it'll be in the third week.
     patch_tuesday = month_calendar[1][1] if month_calendar[0][1] else month_calendar[2][1]
-
+    
     return patch_tuesday
-
-## patch_tuesday = get_patch_tuesdays(2034, 7)
-## print(f"Patch Tuesday falls on {patch_tuesday}.")
 
 
 ##########
@@ -135,16 +132,11 @@ for num in numbers_list:
              mil_time = patch['MILTIME']
              summary = patch['SUMMARY']
              description = patch['DESCRIPTION']
-             #print(f"PTOFFSET: {pt_offset}")
-             #print(f"MILTIME: {mil_time}")
-             #print(f"SUMMARY: {summary}")
-             #print(f"DESCRIPTION: {description}")
-             #print("--- End of patch ---")
-             print( f"pt {patch_tuesday} year {year} month {num} ptoffset {pt_offset} miltime {mil_time} summary {summary} discription {description} ")
-             
-
-
-
+             ## print( f"pt {patch_tuesday} year {year} month {num} ptoffset {pt_offset} miltime {mil_time} summary {summary} discription {description} ")
+             realday=int(patch_tuesday)+int(pt_offset)
+             print( f"year {year}, month {num}, day {patch_tuesday}, ptoffset {pt_offset}, realday {realday} "   )
+            
+                              
 
 
    
