@@ -11,3 +11,20 @@ DESCRIPTION:Weekly team meeting to discuss project status.
 LOCATION:Conference Room
 END:VEVENT
 END:VCALENDAR
+
+This one if for New York time !!
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+BEGIN:VEVENT
+UID:uid1@example.com
+DTSTAMP:20230607T190000Z
+ORGANIZER;CN=Your Name:mailto:your-email@example.com
+DTSTART;TZID=America/New_York:20230608T100000
+DTEND;TZID=America/New_York:20230608T110000
+SUMMARY:Your Meeting Summary
+DESCRIPTION:Description of your meeting.
+LOCATION:Location of your meeting
+END:VEVENT
+END:VCALENDAR
+

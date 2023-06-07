@@ -3,12 +3,21 @@ import csv
 import calendar
 #from datetime import datetime, timedelta
 
+
 ##########
 ## 
 ##  Written by David Brendlinger in June of 2023
 ##  Secu Calender for Server Opperations team patching
 ##
 ##########
+
+
+## Set Timezones. This is to un-messup the time to align the patches by correct hour
+#tz="America/New_York"
+tz="America/Halifax"
+#tz="America/Chicago"
+
+
 
 
 ##########

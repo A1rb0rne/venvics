@@ -1,4 +1,5 @@
 PTOFFSET,MILTIME,SUMMARY,DESCRIPTION
-1,1400,Patch Tuesday,Microsoft's monthly security update
-2,0900,Server Maintenance,Weekly server maintenance window
-3,1800,Database Patch,Applying patches to the database
+2,17:30,Patch Dev Intranet,Patch Dev Intranet Details
+7,17:30,Patch Sit Intranet,Patch Sit Intranet Details
+7,19:30,Patch QA Intranet,Patch QA Intranet Details
+14,21:00,Patch Prod Intranet,Patch Prod Intranet  
