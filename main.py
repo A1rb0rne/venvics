@@ -17,7 +17,7 @@ import calendar
 tz="America/Halifax"
 #tz="America/Chicago"
 
-
+## also note I am going to use the day prior for the DTSTAMP.  I know I need to use zulu time. 
 
 
 ##########
