@@ -146,7 +146,7 @@ def create_ical_file():
         file.write("PRODID:-//Example//Calendar//EN\n")
         ## will add later: file.write("END:VCALENDAR\n")
 
-    print(f"{ical_file_name} has been created.")
+#    print(f"{ical_file_name} has been created.")
     
 
 
@@ -163,6 +163,9 @@ def create_ical_file():
 create_ical_file()
 year = ask_year()
 numbers_list = get_and_display_months()
+venvent_array = []
+
+
 
 for num in numbers_list:
         patch_tuesday = get_patch_tuesdays(year,num)
@@ -177,8 +180,21 @@ for num in numbers_list:
              ## print( f"pt {patch_tuesday} year {year} month {num} ptoffset {pt_offset} miltime {mil_time} summary {summary} discription {description} ")
              realday=int(patch_tuesday)+int(pt_offset)
              realdtstamp=int(patch_tuesday)+int(pt_offset)-int(1)
-             print( f"year {year}, month {num}, day {patch_tuesday}, ptoffset {pt_offset}, realday {realday} miltime {mil_time} summary {summary} discription {description} realdtstamp {realdtstamp}   "   )
+             #print( f"year {year}, month {num}, day {patch_tuesday}, ptoffset {pt_offset}, realday {realday} miltime {mil_time} summary {summary} discription {description} realdtstamp {realdtstamp}   "   )
+             venventline01="BEGIN:VEVENT \n"
+             venventline02="UID:uid1@ncsecu.com \n"
+             venventline03 = "DTSTAMP:{}{}{} \n".format(year, num, realdtstamp)
+             #ORGANIZER;CN=Your Name:mailto:your-email@example.com
+             #DTSTART;TZID=America/Halifax:20230608T100000
+             #DTEND;TZID=America/Halifax:20230608T110000
+             #SUMMARY:Your Meeting Summary
+             #DESCRIPTION:Description of your meeting.
+             #LOCATION:Location of your meeting
+             #END:VEVENT          
+             print(f"{venventline01}{venventline02}{venventline03}summary {summary} \n" )
              
+             
+
                                
 
 
