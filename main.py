@@ -2,7 +2,6 @@ import datetime
 import csv
 import calendar
 import datetime
-#from datetime import datetime, timedelta
 
 
 ##########
@@ -145,13 +144,6 @@ def create_ical_file():
         file.write("BEGIN:VCALENDAR\n")
         file.write("VERSION:2.0\n")
         file.write("PRODID:-//Example//Calendar//EN\n")
-        ## will add later: file.write("END:VCALENDAR\n")
-
-#    print(f"{ical_file_name} has been created.")
-    
-
-
-
 
 
 ##########
@@ -179,7 +171,6 @@ for num in numbers_list:
              mil_timeend = patch['MILTIMEEND']
              summary = patch['SUMMARY']
              description = patch['DESCRIPTION']
-             ## print( f"pt {patch_tuesday} year {year} month {num} ptoffset {pt_offset} miltime {mil_time} summary {summary} discription {description} ")
              realday=int(patch_tuesday)+int(pt_offset)
              realdtstamp=int(patch_tuesday)+int(pt_offset)-int(1)
              #print( f"year {year}, month {num}, day {patch_tuesday}, ptoffset {pt_offset}, realday {realday} miltime {mil_time} summary {summary} discription {description} realdtstamp {realdtstamp}   "   )
@@ -193,9 +184,7 @@ for num in numbers_list:
              venventline08 = "DESCRIPTION:{}\n".format(description)
              venventline09 = "LOCATION:Virtual\n"
              venventline10 = "END:VEVENT\n"
-            
-                              
-             #print(f"{venventline01}{venventline02}{venventline03}{venventline04}{venventline05}{venventline06}{venventline07}{venventline08}{venventline09}{venventline10}" )
+             
              with open(ical_file_name, 'a') as f:
                  f.write(venventline01)
                  f.write(venventline02)
