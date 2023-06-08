@@ -195,7 +195,7 @@ for num in numbers_list:
              venventline10 = "END:VEVENT\n"
             
                               
-             print(f"{venventline01}{venventline02}{venventline03}{venventline04}{venventline05}{venventline06}{venventline07}{venventline08}{venventline09}{venventline10}" )
+             #print(f"{venventline01}{venventline02}{venventline03}{venventline04}{venventline05}{venventline06}{venventline07}{venventline08}{venventline09}{venventline10}" )
              with open(ical_file_name, 'a') as f:
                  f.write(venventline01)
                  f.write(venventline02)
@@ -207,7 +207,9 @@ for num in numbers_list:
                  f.write(venventline08)
                  f.write(venventline09)
                  f.write(venventline10)
-                 f.write("END:VCALENDAR")
+                 
+with open(ical_file_name, 'a') as f:
+    f.write("END:VCALENDAR")
                  
                  
             
