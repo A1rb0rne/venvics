@@ -1,6 +1,7 @@
 import datetime
 import csv
 import calendar
+import datetime
 #from datetime import datetime, timedelta
 
 
@@ -120,6 +121,40 @@ def get_patch_tuesdays(year, month):
     
     return patch_tuesday
 
+##########
+## 
+## I am trying to create an .ical file in python.  
+## Can you open a file  with the name of {year},{month}date.ical and add three lines of example text it in.  
+## The date would be the date given by python in the simplest ymdhs format  
+##
+## create_ical_file()
+##
+##########
+
+
+
+def create_ical_file():
+    # Get the current date and time
+    current_date = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+
+    # Define the file name
+    file_name = f"./outputicsfiles/Patches-{current_date}.ical"
+
+
+    # Open the file in write mode
+    with open( file_name, 'w') as file:
+        # Write the example text to the file
+        file.write("BEGIN:VCALENDAR\n")
+        file.write("VERSION:2.0\n")
+        file.write("PRODID:-//Example//Calendar//EN\n")
+        ## will add later: file.write("END:VCALENDAR\n")
+
+    print(f"{file_name} has been created.")
+    
+
+
+
+
 
 ##########
 ##    
@@ -127,7 +162,8 @@ def get_patch_tuesdays(year, month):
 ## 
 ##########   
 
-
+# Call the function to create the .ical file
+create_ical_file()
 year = ask_year()
 numbers_list = get_and_display_months()
 
@@ -143,7 +179,8 @@ for num in numbers_list:
              description = patch['DESCRIPTION']
              ## print( f"pt {patch_tuesday} year {year} month {num} ptoffset {pt_offset} miltime {mil_time} summary {summary} discription {description} ")
              realday=int(patch_tuesday)+int(pt_offset)
-             print( f"year {year}, month {num}, day {patch_tuesday}, ptoffset {pt_offset}, realday {realday} "   )
+             realdtstamp=int(patch_tuesday)+int(pt_offset)-int(1)
+             print( f"year {year}, month {num}, day {patch_tuesday}, ptoffset {pt_offset}, realday {realday} miltime {mil_time} summary {summary} discription {description} realdtstamp {realdtstamp}   "   )
             
                               
 
