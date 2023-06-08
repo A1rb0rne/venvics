@@ -95,6 +95,7 @@ def read_file_patches2():
             data.append({
                 'PTOFFSET': row['PTOFFSET'],
                 'MILTIME': row['MILTIME'],
+                'MILTIMEEND': row['MILTIMEEND'],
                 'SUMMARY': row['SUMMARY'],
                 'DESCRIPTION': row['DESCRIPTION'],
             })
@@ -175,23 +176,27 @@ for num in numbers_list:
              # print(patch)
              pt_offset = patch['PTOFFSET']
              mil_time = patch['MILTIME']
+             mil_timeend = patch['MILTIMEEND']
              summary = patch['SUMMARY']
              description = patch['DESCRIPTION']
              ## print( f"pt {patch_tuesday} year {year} month {num} ptoffset {pt_offset} miltime {mil_time} summary {summary} discription {description} ")
              realday=int(patch_tuesday)+int(pt_offset)
              realdtstamp=int(patch_tuesday)+int(pt_offset)-int(1)
              #print( f"year {year}, month {num}, day {patch_tuesday}, ptoffset {pt_offset}, realday {realday} miltime {mil_time} summary {summary} discription {description} realdtstamp {realdtstamp}   "   )
-             venventline01="BEGIN:VEVENT \n"
-             venventline02="UID:uid1@ncsecu.com \n"
-             venventline03 = "DTSTAMP:{}{}{} \n".format(year, num, realdtstamp)
-             #ORGANIZER;CN=Your Name:mailto:your-email@example.com
-             #DTSTART;TZID=America/Halifax:20230608T100000
-             #DTEND;TZID=America/Halifax:20230608T110000
-             #SUMMARY:Your Meeting Summary
-             #DESCRIPTION:Description of your meeting.
-             #LOCATION:Location of your meeting
-             #END:VEVENT          
-             print(f"{venventline01}{venventline02}{venventline03}summary {summary} \n" )
+             venventline01 = "BEGIN:VEVENT\n"
+             venventline02 = "UID:uid1@ncsecu.com\n"
+             venventline03 = "DTSTAMP:{}{:02d}{:02d}T190000Z\n".format(year, num, realdtstamp)
+             venventline04 = "ORGANIZER;CN=David Brendlinger:mailto:david.brendlinger@ncsecu.com\n"
+             venventline05 = "DTSTART;TZID={}:{:04d}{:02d}{:02d}T{}\n".format(tz, year, num, realday, mil_time)
+             venventline06 = "DTEND;TZID={}:{:04d}{:02d}{:02d}T{}\n".format(tz, year, num, realday, mil_timeend)
+             venventline07 = "SUMMARY:{}\n".format(summary)
+             venventline08 = "DESCRIPTION:{}\n".format(description)
+             venventline09 = "LOCATION: Virtual\n"
+             venventline10 = "END:VEVENT"
+            
+                              
+             print(f"{venventline01}{venventline02}{venventline03}{venventline04}{venventline05}{venventline06}{venventline07}{venventline08}{venventline09}{venventline10}" )
+            
              
              
 
