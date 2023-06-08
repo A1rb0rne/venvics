@@ -191,11 +191,25 @@ for num in numbers_list:
              venventline06 = "DTEND;TZID={}:{:04d}{:02d}{:02d}T{}\n".format(tz, year, num, realday, mil_timeend)
              venventline07 = "SUMMARY:{}\n".format(summary)
              venventline08 = "DESCRIPTION:{}\n".format(description)
-             venventline09 = "LOCATION: Virtual\n"
-             venventline10 = "END:VEVENT"
+             venventline09 = "LOCATION:Virtual\n"
+             venventline10 = "END:VEVENT\n"
             
                               
              print(f"{venventline01}{venventline02}{venventline03}{venventline04}{venventline05}{venventline06}{venventline07}{venventline08}{venventline09}{venventline10}" )
+             with open(ical_file_name, 'a') as f:
+                 f.write(venventline01)
+                 f.write(venventline02)
+                 f.write(venventline03)
+                 f.write(venventline04)
+                 f.write(venventline05)
+                 f.write(venventline06)
+                 f.write(venventline07)
+                 f.write(venventline08)
+                 f.write(venventline09)
+                 f.write(venventline10)
+                 f.write("END:VCALENDAR")
+                 
+                 
             
              
              
