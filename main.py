@@ -18,6 +18,9 @@ import datetime
 tz="America/Halifax"
 #tz="America/Chicago"
 
+## Set the ouput file name for my created ical 
+ical_file_name = f"./outputicsfiles/Patches.ical"
+
 ## also note I am going to use the day prior for the DTSTAMP.  I know I need to use zulu time. 
 
 
@@ -134,22 +137,16 @@ def get_patch_tuesdays(year, month):
 
 
 def create_ical_file():
-    # Get the current date and time
-    current_date = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-
-    # Define the file name
-    file_name = f"./outputicsfiles/Patches-{current_date}.ical"
-
 
     # Open the file in write mode
-    with open( file_name, 'w') as file:
+    with open( ical_file_name, 'w') as file:
         # Write the example text to the file
         file.write("BEGIN:VCALENDAR\n")
         file.write("VERSION:2.0\n")
         file.write("PRODID:-//Example//Calendar//EN\n")
         ## will add later: file.write("END:VCALENDAR\n")
 
-    print(f"{file_name} has been created.")
+    print(f"{ical_file_name} has been created.")
     
 
 
@@ -181,8 +178,8 @@ for num in numbers_list:
              realday=int(patch_tuesday)+int(pt_offset)
              realdtstamp=int(patch_tuesday)+int(pt_offset)-int(1)
              print( f"year {year}, month {num}, day {patch_tuesday}, ptoffset {pt_offset}, realday {realday} miltime {mil_time} summary {summary} discription {description} realdtstamp {realdtstamp}   "   )
-            
-                              
+             
+                               
 
 
    

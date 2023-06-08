@@ -1,5 +1,5 @@
 PTOFFSET,MILTIME,SUMMARY,DESCRIPTION
-2,17:30,Patch Dev Intranet,Patch Dev Intranet Details
-7,17:30,Patch Sit Intranet,Patch Sit Intranet Details
-7,19:30,Patch QA Intranet,Patch QA Intranet Details
-14,21:00,Patch Prod Intranet,Patch Prod Intranet  
+2,173000,Patch Dev Intranet,Patch Dev Intranet Details
+7,173000,Patch Sit Intranet,Patch Sit Intranet Details
+7,193000,Patch QA Intranet,Patch QA Intranet Details
+14,210000,Patch Prod Intranet,Patch Prod Intranet  
