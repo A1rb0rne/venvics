@@ -7,7 +7,7 @@ import datetime
 ##########
 ## 
 ##  Written by David Brendlinger in June of 2023
-##  Secu Calender for Server Opperations team patching
+##  Secu Calender for Server Operations team patching
 ##
 ##########
 
@@ -154,6 +154,7 @@ def create_ical_file():
 ##########   
 
 # Call the function to create the .ical file
+print("After Daylight savings time is over for the year, a different timezone MIGHT need to be selected in the Python code so scheduled patches are not off by one hour.")
 create_ical_file()
 year = ask_year()
 numbers_list = get_and_display_months()
