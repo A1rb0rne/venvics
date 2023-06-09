@@ -4,7 +4,7 @@ PRODID:-//Example//Calendar//EN
 BEGIN:VEVENT
 UID:uid1@ncsecu.com
 DTSTAMP:20230412T190000Z
-ORGANIZER;CN=David Brendlinger:mailto:david.brendlinger@ncsecu.com
+ORGANIZER;CN=David Brendlinger:mailto:x@y.com
 DTSTART;TZID=America/Halifax:20230413T173000
 DTEND;TZID=America/Halifax:20230413T180000
 SUMMARY:Patch Dev Intranet
@@ -14,7 +14,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:uid1@ncsecu.com
 DTSTAMP:20230417T190000Z
-ORGANIZER;CN=David Brendlinger:mailto:david.brendlinger@ncsecu.com
+ORGANIZER;CN=David Brendlinger:mailto:x@y.com
 DTSTART;TZID=America/Halifax:20230418T173000
 DTEND;TZID=America/Halifax:20230418T180000
 SUMMARY:Patch Sit Intranet
@@ -24,7 +24,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:uid1@ncsecu.com
 DTSTAMP:20230417T190000Z
-ORGANIZER;CN=David Brendlinger:mailto:david.brendlinger@ncsecu.com
+ORGANIZER;CN=David Brendlinger:mailto:x@y.com
 DTSTART;TZID=America/Halifax:20230418T193000
 DTEND;TZID=America/Halifax:20230418T200000
 SUMMARY:Patch QA Intranet
@@ -34,17 +34,17 @@ END:VEVENT
 BEGIN:VEVENT
 UID:uid1@ncsecu.com
 DTSTAMP:20230424T190000Z
-ORGANIZER;CN=David Brendlinger:mailto:david.brendlinger@ncsecu.com
+ORGANIZER;CN=David Brendlinger:mailto:x@y.com
 DTSTART;TZID=America/Halifax:20230425T210000
 DTEND;TZID=America/Halifax:20230425T213000
 SUMMARY:Patch Prod Intranet
-DESCRIPTION:Patch Prod Intranet  
+DESCRIPTION:Patch Prod Intranet 
 LOCATION:Virtual
 END:VEVENT
 BEGIN:VEVENT
 UID:uid1@ncsecu.com
 DTSTAMP:20230510T190000Z
-ORGANIZER;CN=David Brendlinger:mailto:david.brendlinger@ncsecu.com
+ORGANIZER;CN=David Brendlinger:mailto:x@y.com
 DTSTART;TZID=America/Halifax:20230511T173000
 DTEND;TZID=America/Halifax:20230511T180000
 SUMMARY:Patch Dev Intranet
@@ -54,7 +54,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:uid1@ncsecu.com
 DTSTAMP:20230515T190000Z
-ORGANIZER;CN=David Brendlinger:mailto:david.brendlinger@ncsecu.com
+ORGANIZER;CN=David Brendlinger:mailto:x@y.com
 DTSTART;TZID=America/Halifax:20230516T173000
 DTEND;TZID=America/Halifax:20230516T180000
 SUMMARY:Patch Sit Intranet
@@ -64,7 +64,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:uid1@ncsecu.com
 DTSTAMP:20230515T190000Z
-ORGANIZER;CN=David Brendlinger:mailto:david.brendlinger@ncsecu.com
+ORGANIZER;CN=David Brendlinger:mailto:x@y.com
 DTSTART;TZID=America/Halifax:20230516T193000
 DTEND;TZID=America/Halifax:20230516T200000
 SUMMARY:Patch QA Intranet
@@ -74,11 +74,11 @@ END:VEVENT
 BEGIN:VEVENT
 UID:uid1@ncsecu.com
 DTSTAMP:20230522T190000Z
-ORGANIZER;CN=David Brendlinger:mailto:david.brendlinger@ncsecu.com
+ORGANIZER;CN=David Brendlinger:mailto:x@y.com
 DTSTART;TZID=America/Halifax:20230523T210000
 DTEND;TZID=America/Halifax:20230523T213000
 SUMMARY:Patch Prod Intranet
-DESCRIPTION:Patch Prod Intranet  
+DESCRIPTION:Patch Prod Intranet 
 LOCATION:Virtual
 END:VEVENT
 END:VCALENDAR

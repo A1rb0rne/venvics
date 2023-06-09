@@ -17,8 +17,8 @@ import datetime
 tz="America/Halifax"
 #tz="America/Chicago"
 
-## Set the ouput file name for my created ical 
-ical_file_name = f"./outputicsfiles/Patches.ical"
+## Set the ouput file name for my created .ics
+ical_file_name = f"./outputicsfiles/Patches.ics"
 
 ## also note I am going to use the day prior for the DTSTAMP.  I know I need to use zulu time. 
 
