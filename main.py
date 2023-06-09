@@ -177,7 +177,7 @@ for num in numbers_list:
              venventline01 = "BEGIN:VEVENT\n"
              venventline02 = "UID:uid1@ncsecu.com\n"
              venventline03 = "DTSTAMP:{}{:02d}{:02d}T190000Z\n".format(year, num, realdtstamp)
-             venventline04 = "ORGANIZER;CN=David Brendlinger:mailto:david.brendlinger@ncsecu.com\n"
+             venventline04 = "ORGANIZER;CN=David Brendlinger:mailto:x@y.com\n"
              venventline05 = "DTSTART;TZID={}:{:04d}{:02d}{:02d}T{}\n".format(tz, year, num, realday, mil_time)
              venventline06 = "DTEND;TZID={}:{:04d}{:02d}{:02d}T{}\n".format(tz, year, num, realday, mil_timeend)
              venventline07 = "SUMMARY:{}\n".format(summary)
