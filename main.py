@@ -97,6 +97,7 @@ def read_file_patches2():
                 'MILTIMEEND': row['MILTIMEEND'],
                 'SUMMARY': row['SUMMARY'],
                 'DESCRIPTION': row['DESCRIPTION'],
+                'ORGANIZER': row['ORGANIZER'],
             })
     return data
 
@@ -169,6 +170,7 @@ for num in numbers_list:
              pt_offset = patch['PTOFFSET']
              mil_time = patch['MILTIME']
              mil_timeend = patch['MILTIMEEND']
+             organizer = patch['ORGANIZER']
              summary = patch['SUMMARY']
              description = patch['DESCRIPTION']
              realday=int(patch_tuesday)+int(pt_offset)
@@ -177,12 +179,12 @@ for num in numbers_list:
              venventline01 = "BEGIN:VEVENT\n"
              venventline02 = "UID:uid1@ncsecu.com\n"
              venventline03 = "DTSTAMP:{}{:02d}{:02d}T190000Z\n".format(year, num, realdtstamp)
-             venventline04 = "ORGANIZER;CN=David Brendlinger:mailto:x@y.com\n"
+             venventline04 = "ORGANIZER;CN={}:mailto:x@y.com\n".format(organizer)
              venventline05 = "DTSTART;TZID={}:{:04d}{:02d}{:02d}T{}\n".format(tz, year, num, realday, mil_time)
              venventline06 = "DTEND;TZID={}:{:04d}{:02d}{:02d}T{}\n".format(tz, year, num, realday, mil_timeend)
              venventline07 = "SUMMARY:{}\n".format(summary)
              venventline08 = "DESCRIPTION:{}\n".format(description)
-             venventline09 = "LOCATION:Virtual\n"
+             venventline09 = "LOCATION:VT \n"
              venventline10 = "END:VEVENT\n"
              
              with open(ical_file_name, 'a') as f:

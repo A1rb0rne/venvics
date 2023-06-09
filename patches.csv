@@ -1,5 +1,5 @@
-PTOFFSET,MILTIME,MILTIMEEND,SUMMARY,DESCRIPTION
-2,173000,180000,Patch Dev Intranet,Patch Dev Intranet Details
-7,173000,180000,Patch Sit Intranet,Patch Sit Intranet Details
-7,193000,200000,Patch QA Intranet,Patch QA Intranet Details
-14,210000,213000,Patch Prod Intranet,Patch Prod Intranet 
+PTOFFSET,MILTIME,MILTIMEEND,ORGANIZER,SUMMARY,DESCRIPTION
+2,173000,180000,Brendlinger,Patch Dev Intranet,Patch Dev Intranet Details
+7,173000,180000,Brendlinger,Patch Sit Intranet,Patch Sit Intranet Details
+7,193000,200000,Brendlinger,Patch QA Intranet,Patch QA Intranet Details
+14,210000,213000,Terrence,Patch Prod Intranet,Patch Prod Intranet 
